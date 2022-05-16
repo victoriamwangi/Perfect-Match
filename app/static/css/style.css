@@ -1,5 +1,12 @@
 .navbar {
-    background-color: #88335f;
+    background-color: #ff009e;
+    padding-left: 5vw;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-collapse {
+    padding-left: 40vw;
 }
 
 #registerFrm,
