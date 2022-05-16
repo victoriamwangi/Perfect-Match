@@ -5,10 +5,10 @@ from ..models import User
 
 class RegistrationForm(FlaskForm):
     email = StringField('Your Email Address ', validators= [DataRequired(), Email()])
-    username = StringField('Enter your username',validators = [DataRequired()])
+    username = StringField('Username',validators = [DataRequired()])
     password = PasswordField('Password',validators = [DataRequired(), EqualTo('password_confirm',message = 'Passwords must match')])
     password_confirm = PasswordField('Confirm Passwords',validators = [DataRequired()])
-    submit = SubmitField('Sign Up')
+    submit = SubmitField('SIGN UP')
     def validate_email(self,data_field):
             if User.query.filter_by(email =data_field.data).first():
                 raise ValidationError('There is an account with that email')
@@ -21,4 +21,4 @@ class LoginForm(FlaskForm):
     email = StringField('Your Email Address',validators=[DataRequired(),Email()])
     password = PasswordField('Password',validators =[DataRequired()])
     remember = BooleanField('Remember me')
-    submit = SubmitField('Sign In')
+    submit = SubmitField('SIGN IN')

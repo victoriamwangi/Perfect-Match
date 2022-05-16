@@ -1,5 +1,22 @@
-#registerFrm {
-    width: 60vw;
+.navbar {
+    background-color: #88335f;
+}
+
+#registerFrm,
+#loginFrm {
+    width: 38vw !important;
+    box-shadow: 1px 1px 5px grey;
+    height: 80vh;
+    padding: 2vw 2vw;
+    border-radius: 10px;
+    margin-top: 2vw;
+}
+
+.topicH {
+    text-align: center;
+    font-weight: bold;
+    color: #ff819f;
+    font-size: 1.6vw;
 }
 
 .form-control {
@@ -9,4 +26,14 @@
 .btn {
     background-color: #ff009e !important;
     width: 100%;
+    margin-bottom: 2vw;
+    height: 3vw;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4vw;
+}
+
+input {
+    background-color: none !important;
+    width: 32vw !important;
 }
