@@ -1,0 +1,12 @@
+#registerFrm {
+    width: 60vw;
+}
+
+.form-control {
+    border: 1px solid #ff009e;
+}
+
+.btn {
+    background-color: #ff009e !important;
+    width: 100%;
+}
