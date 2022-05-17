@@ -1,6 +1,6 @@
 import os
 class Config():
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:4798@localhost/perfect'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://ph:Student11@localhost/perfect'
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
 class DevConfig(Config):
