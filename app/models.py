@@ -14,7 +14,7 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(255), unique=True, index= True)
     pass_secure = db.Column(db.String(255))
     bio = db.Column(db.String(255))
-    age = db.Column(db.Integer)
+    age = db.Column(db.Integer())
     gender = db.Column(db.String())
     profile_pic_path = db.Column(db.String())
     race = db.Column(db.String(10))

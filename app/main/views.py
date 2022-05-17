@@ -35,8 +35,6 @@ def update_profile(username):
         user.location = form.location.data
         user.occupation = form.occupation.data
         user.bio = form.bio.data
-
-
         db.session.add(user)
         db.session.commit()
         return redirect(url_for('.profile',username=user.username))

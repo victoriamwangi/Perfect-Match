@@ -8,7 +8,6 @@ class UpdateProfile(FlaskForm):
     email = StringField("Email",validators=[DataRequired()])
     gender =SelectField('Gender', choices=[('Male','Male'), ('Female', 'Female')],
                            validators=[DataRequired()])
-
     occupation = TextAreaField("Occupation",validators=[DataRequired()])
     age = IntegerField("Age",validators=[DataRequired()])
     location = TextAreaField("Location",validators=[DataRequired()])
