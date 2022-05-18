@@ -3,7 +3,7 @@ class Config():
 
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://vonetta:von123@localhost/perfect'
 
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY = 'SECRET_KEY'
 
 class DevConfig(Config):
     DEBUG= True
