@@ -1,0 +1,22 @@
+/* Profile syling */
+.pro{
+    float: none;
+    display: block;
+    margin: auto;
+    width: 60%;
+    height: 70%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important; 
+    border-radius: 50% !important;  
+}
+input[type="file"]{
+    background-color: transparent;
+    border: none;
+}
+input[type="submit"]{
+    background-color:  rgb(110, 51, 61); 
+    width: 20%;
+}
+#upload{
+    background-color: transparent;
+}
