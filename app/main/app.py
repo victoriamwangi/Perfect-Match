@@ -1,5 +1,12 @@
 from flask import Flask
 
+
+
+app = Flask(__name__)
+
+
+from flask import Flask
+
 UPLOAD_FOLDER = 'static/uploads/'
 
 app = Flask(__name__)
