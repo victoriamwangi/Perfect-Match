@@ -1,3 +1,4 @@
+
 import os	
 import urllib.request
 from flask import Flask, flash, request, redirect, url_for, render_template
@@ -6,6 +7,10 @@ from flask_login import login_required,current_user
 from ..models import User,Post,Like,Comment,Images
 from .forms import UpdateProfile,UploadForm
 from .. import db, photos
+
+
+
+
 from . import main
 from werkzeug.utils import secure_filename
 from app import create_app
@@ -49,9 +54,6 @@ def viewimage():
     return render_template("imageview.html",name=current_user.username,images=userimages)
 
 
-
-
-
 #user profile
 @main.route('/user/<username>')
 def profile(username):
@@ -83,6 +85,8 @@ def update_profile(username):
    return render_template('profile/update.html',form =form)
 
 # profile pic
+
+#profile pic
 @main.route('/user/<username>/update/pic',methods=['POST'])
 @login_required
 def update_pic(username):
@@ -92,4 +96,6 @@ def update_pic(username):
       path = f'photos/{filename}'
       user.profile_pic_path = path
       db.session.commit()
+
    return redirect(url_for('main.profile',username=username))
+

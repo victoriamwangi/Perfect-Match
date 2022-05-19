@@ -23,6 +23,7 @@ def create_app(config_name):
     app.config['UPLOADED_PHOTOS_DEST'] ='app/static/photos'
     app.config['UPLOAD_FOLDER'] = 'app/static/uploads'
     # app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
     
     #configure uploadset
