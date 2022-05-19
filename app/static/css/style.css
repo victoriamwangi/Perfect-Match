@@ -52,11 +52,13 @@
     margin-bottom: 2vw;
     padding-top: 2vw;
     flex-wrap: wrap;
-    padding: 2vw 10vw;
+    /* padding: 2vw 10vw; */
 }
 
 #profs .card {
-    margin-left: 3vw;
+    margin-bottom: 3vw;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 215, 215);
 }
 
 .profs .btn,
@@ -66,12 +68,18 @@ svg {
     border: none;
 }
 
-.btn-primary {
-    background-color: yellow !important;
+.reactions .captn {
+    display: flex;
+    flex-direction: row !important;
 }
 
-.reactions {
-    width: 15vw;
+.reactions .captn p:last-of-type {
+    margin-left: 10vw;
+}
+
+.reactions .btn {
+    background-color: transparent;
+    border: none;
 }
 
 #imgpost {
