@@ -1,11 +1,8 @@
 {%extends 'base.html'%} {% block styles%}{{super()}}
 <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
 {%endblock%} {%block content%}
-
 <div class="card-deck" id="profs">
-  <h3>{{user}}</h3>
   {% for image in images %}
-
   <div class="card">
     <img
       class="card-img-top"
