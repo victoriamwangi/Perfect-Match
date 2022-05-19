@@ -1,4 +1,5 @@
-
+{% import 'bootstrap/wtf.html' as wtf%} 
+{% block content %}
 	{% with messages = get_flashed_messages() %}
 	  {% if messages %}
 		<ul class=flashes>
@@ -10,21 +11,10 @@
 	{% endwith %}
 
 
-<form method="post"  enctype="multipart/form-data">
-    <dl>
-		<p>
-			<input type="file" name="files[]" multiple="true" autocomplete="off" required>
-		</p>
-    </dl>
-    <p>
-		<input type="submit" value="Submit">
-	</p>
-</form>
+	
+	<div class="container">
+	  {{ wtf.quick_form(upload_form, button_map={'submit':'btn'}) }}
+	</div>
 
-{% if filenames %}
-	{% for filename in filenames %}
-		<div>
-			<img src="{{ url_for('display_image', filename=filename) }}">
-		</div>
-	{% endfor %}
-{% endif %}
+
+{%endblock%}

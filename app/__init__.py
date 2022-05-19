@@ -10,7 +10,7 @@ bootstrap = Bootstrap()
 db = SQLAlchemy()
 login_manager = LoginManager()
 photos =UploadSet('photos',IMAGES)
-# UPLOAD_FOLDER = 'static/uploads/'
+
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
 
@@ -21,7 +21,7 @@ def create_app(config_name):
     
     #photo uploads config
     app.config['UPLOADED_PHOTOS_DEST'] ='app/static/photos'
-    # app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+    app.config['UPLOAD_FOLDER'] = 'app/static/uploads'
     # app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
     

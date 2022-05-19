@@ -23,4 +23,8 @@ class UpdateProfile(FlaskForm):
     bio = TextAreaField("Bio",validators=[DataRequired()])
     
     submit = SubmitField("Update",validators=[DataRequired()]) 
+    
+class UploadForm(FlaskForm):
+    file=FileField('Add a File',validators=[DataRequired()])
+    submit=SubmitField('Upload')
 

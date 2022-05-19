@@ -58,3 +58,10 @@ class Like(db.Model):
     author = db.Column(db.Integer,db.ForeignKey('users.id',ondelete='CASCADE'))
     post_id = db.Column(db.Integer,db.ForeignKey('post.id',ondelete='CASCADE'),nullable=False)
 
+
+    
+class Images(db.Model):
+    id=db.Column(db.Integer,primary_key=True)
+    name=db.Column(db.String(50),nullable=False)
+    uploader_id=db.Column(db.Integer,db.ForeignKey('users.id'))
+    
