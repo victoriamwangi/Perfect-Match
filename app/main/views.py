@@ -17,7 +17,7 @@ app=create_app('development')
 def index():
     images = Images.query.order_by(Images.posted.desc()).all()   
    
-    return render_template("index.html",images=images)
+    return render_template("index.html",images=images, user= current_user)
 
 
 
@@ -97,4 +97,20 @@ def update_pic(username):
       db.session.commit()
 
    return redirect(url_for('main.profile',username=username))
+# likes route
+@main.route('/like/<post_id>',methods=['GET'])
+@login_required
+def like(post_id):
+   post = Images.query.filter_by(id=post_id).first()
+   like =Like.query.filter_by(author=current_user.id, post_id = post_id).first()
+   
+   if like:
+      db.session.delete(like)
+      db.session.commit()
+   else:
+      like = Like(author=current_user.id, post_id=post_id)
+      db.session.add(like)
+      db.session.commit()
+      return redirect(url_for("main.index"))
 
+   return redirect(url_for('main.comment',post_id=post_id))

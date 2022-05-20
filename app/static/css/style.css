@@ -1,3 +1,13 @@
+/* .btn {
+    background-color: #ff009e !important;
+    width: 100%;
+    margin-bottom: 2vw;
+    height: 3vw;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4vw;
+} */
+
 .navbar {
     background-color: #a3069b;
     padding-left: 5vw;
@@ -68,6 +78,10 @@ svg {
     border: none;
 }
 
+.reactions {
+    display: flex;
+}
+
 .reactions .captn {
     display: flex;
     flex-direction: row !important;
@@ -108,17 +122,6 @@ svg {
 .form-control {
     border: 1px solid #ff009e;
 }
-
-
-/* .btn {
-    background-color: #ff009e !important;
-    width: 100%;
-    margin-bottom: 2vw;
-    height: 3vw;
-    color: white;
-    font-weight: bold;
-    font-size: 1.4vw;
-} */
 
 input {
     background-color: none !important;
